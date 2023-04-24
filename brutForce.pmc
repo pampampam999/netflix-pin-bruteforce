@@ -2,33 +2,41 @@
 [PMC Code v5.4.1]|F4||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
 Context=None|
 Groups=Start:1
-1|[Assign Variable]|digitSatu := 9|1|0|Variable|Expression||||1|
+1|[Assign Variable]|digitSatu := 8|1|0|Variable|Expression||||1|
 2|[Assign Variable]|digitDua := 0|1|0|Variable|Expression||||2|
 3|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||3|
 4|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||4|
-5|[LoopStart]|LoopStart|5|0|Loop|||||5|
+5|[LoopStart]|LoopStart|1000|0|Loop|||||5|
 6|Evaluate Expression|digitEmpat == 9|1|0|If_Statement|||||7|
 7|Evaluate Expression|digitTiga == 9|1|0|If_Statement|||||9|
 8|Evaluate Expression|digitDua == 9|1|0|If_Statement|||||11|
-9|[Assign Variable]|digitDua := 0|1|0|Variable|Expression||||13|
-10|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||14|
-11|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||15|
-12|[Add Variable]|digitSatu += 1|1|0|Variable|Expression||||16|
-13|[Else]|Else|1|0|If_Statement|||||17|
-14|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||20|
-15|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||21|
-16|[Add Variable]|digitDua += 1|1|0|Variable|Expression||||22|
-17|[End If]|EndIf|1|0|If_Statement|||||23|
-18|[Else]|Else|1|0|If_Statement|||||24|
-19|[Add Variable]|digitTiga += 1|1|0|Variable|Expression||||27|
+9|WinShow||1|333|WinShow||Netflix - Brave|||13|
+10|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||15|
+11|[Assign Variable]|digitDua := 0|1|0|Variable|Expression||||16|
+12|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||17|
+13|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||18|
+14|[Add Variable]|digitSatu += 1|1|0|Variable|Expression||||19|
+15|[Else]|Else|1|0|If_Statement|||||20|
+16|WinShow||1|333|WinShow||Netflix - Brave|||23|
+17|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||25|
+18|Enter|{Enter}|1|0|Send|||||26|
+19|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||27|
 20|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||28|
-21|[End If]|EndIf|1|0|If_Statement|||||29|
-22|[Else]|Else|1|0|If_Statement|||||30|
-23|WinShow||1|333|WinShow||Untitled - Notepad|||33|
-24|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||35|
-25|[Add Variable]|digitEmpat += 1|1|0|Variable|Expression||||36|
-26|[End If]|EndIf|1|0|If_Statement|||||37|
-27|[LoopEnd]|LoopEnd|1|0|Loop|||||38|
+21|[Add Variable]|digitDua += 1|1|0|Variable|Expression||||29|
+22|[End If]|EndIf|1|0|If_Statement|||||30|
+23|[Else]|Else|1|0|If_Statement|||||31|
+24|WinShow||1|333|WinShow||Netflix - Brave|||34|
+25|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||36|
+26|[Add Variable]|digitTiga += 1|1|0|Variable|Expression||||37|
+27|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||38|
+28|[End If]|EndIf|1|0|If_Statement|||||39|
+29|[Else]|Else|1|0|If_Statement|||||40|
+30|WinShow||1|333|WinShow||Netflix - Brave|||43|
+31|[Pause]||1|100|Sleep|||||45|
+32|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||46|
+33|[Add Variable]|digitEmpat += 1|1|0|Variable|Expression||||47|
+34|[End If]|EndIf|1|0|If_Statement|||||48|
+35|[LoopEnd]|LoopEnd|1|0|Loop|||||49|
 
 [PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Aksi()
 Context=None|
@@ -38,34 +46,127 @@ Groups=Start:1
 3|[FuncParameter]|digitTiga|1|0|FuncParameter|||||1|
 4|[FuncParameter]|digitEmpat|1|0|FuncParameter|||||1|
 5|[FunctionStart]|Aksi|1|0|UserFunction|Local| / |||1|
-6|Evaluate Expression|digitSatu == 0|1|0|If_Statement|||||3|
-7|0|{0}|1|0|Send|||||5|
-8|[End If]|EndIf|1|0|If_Statement|||||6|
-9|Evaluate Expression|digitSatu == 1|1|0|If_Statement|||||7|
-10|1|{1}|1|0|Send|||||9|
-11|[End If]|EndIf|1|0|If_Statement|||||10|
-12|Evaluate Expression|digitSatu == 2|1|0|If_Statement|||||11|
-13|2|{2}|1|0|Send|||||13|
-14|[End If]|EndIf|1|0|If_Statement|||||14|
-15|Evaluate Expression|digitSatu == 3|1|0|If_Statement|||||15|
-16|3|{3}|1|0|Send|||||17|
-17|[End If]|EndIf|1|0|If_Statement|||||18|
-18|Evaluate Expression|digitSatu == 4|1|0|If_Statement|||||19|
-19|4|{4}|1|0|Send|||||21|
-20|[End If]|EndIf|1|0|If_Statement|||||22|
-21|Evaluate Expression|digitSatu == 5|1|0|If_Statement|||||23|
-22|5|{5}|1|0|Send|||||25|
-23|[End If]|EndIf|1|0|If_Statement|||||26|
-24|Evaluate Expression|digitSatu == 6|1|0|If_Statement|||||27|
-25|6|{6}|1|0|Send|||||29|
-26|[End If]|EndIf|1|0|If_Statement|||||30|
-27|Evaluate Expression|digitSatu == 7|1|0|If_Statement|||||31|
-28|7|{7}|1|0|Send|||||33|
-29|[End If]|EndIf|1|0|If_Statement|||||34|
-30|Evaluate Expression|digitSatu == 8|1|0|If_Statement|||||35|
-31|8|{8}|1|0|Send|||||37|
-32|[End If]|EndIf|1|0|If_Statement|||||38|
-33|Evaluate Expression|digitSatu == 9|1|0|If_Statement|||||39|
-34|9|{9}|1|0|Send|||||41|
-35|[End If]|EndIf|1|0|If_Statement|||||42|
+6|[Pause]||1|100|Sleep|||||3|
+7|Evaluate Expression|digitSatu == 0|1|0|If_Statement|||||4|
+8|0|{0}|1|0|Send|||||6|
+9|[End If]|EndIf|1|0|If_Statement|||||7|
+10|Evaluate Expression|digitSatu == 1|1|0|If_Statement|||||8|
+11|1|{1}|1|0|Send|||||10|
+12|[End If]|EndIf|1|0|If_Statement|||||11|
+13|Evaluate Expression|digitSatu == 2|1|0|If_Statement|||||12|
+14|2|{2}|1|0|Send|||||14|
+15|[End If]|EndIf|1|0|If_Statement|||||15|
+16|Evaluate Expression|digitSatu == 3|1|0|If_Statement|||||16|
+17|3|{3}|1|0|Send|||||18|
+18|[End If]|EndIf|1|0|If_Statement|||||19|
+19|Evaluate Expression|digitSatu == 4|1|0|If_Statement|||||20|
+20|4|{4}|1|0|Send|||||22|
+21|[End If]|EndIf|1|0|If_Statement|||||23|
+22|Evaluate Expression|digitSatu == 5|1|0|If_Statement|||||24|
+23|5|{5}|1|0|Send|||||26|
+24|[End If]|EndIf|1|0|If_Statement|||||27|
+25|Evaluate Expression|digitSatu == 6|1|0|If_Statement|||||28|
+26|6|{6}|1|0|Send|||||30|
+27|[End If]|EndIf|1|0|If_Statement|||||31|
+28|Evaluate Expression|digitSatu == 7|1|0|If_Statement|||||32|
+29|7|{7}|1|0|Send|||||34|
+30|[End If]|EndIf|1|0|If_Statement|||||35|
+31|Evaluate Expression|digitSatu == 8|1|0|If_Statement|||||36|
+32|8|{8}|1|0|Send|||||38|
+33|[End If]|EndIf|1|0|If_Statement|||||39|
+34|Evaluate Expression|digitSatu == 9|1|0|If_Statement|||||40|
+35|9|{9}|1|0|Send|||||42|
+36|[End If]|EndIf|1|0|If_Statement|||||43|
+37|[Pause]||1|0|Sleep|||||44|
+38|Evaluate Expression|digitDua == 0|1|0|If_Statement|||||45|
+39|0|{0}|1|0|Send|||||47|
+40|[End If]|EndIf|1|0|If_Statement|||||48|
+41|Evaluate Expression|digitDua== 1|1|0|If_Statement|||||49|
+42|1|{1}|1|0|Send|||||51|
+43|[End If]|EndIf|1|0|If_Statement|||||52|
+44|Evaluate Expression|digitDua== 2|1|0|If_Statement|||||53|
+45|2|{2}|1|0|Send|||||55|
+46|[End If]|EndIf|1|0|If_Statement|||||56|
+47|Evaluate Expression|digitDua== 3|1|0|If_Statement|||||57|
+48|3|{3}|1|0|Send|||||59|
+49|[End If]|EndIf|1|0|If_Statement|||||60|
+50|Evaluate Expression|digitDua== 4|1|0|If_Statement|||||61|
+51|4|{4}|1|0|Send|||||63|
+52|[End If]|EndIf|1|0|If_Statement|||||64|
+53|Evaluate Expression|digitDua== 5|1|0|If_Statement|||||65|
+54|5|{5}|1|0|Send|||||67|
+55|[End If]|EndIf|1|0|If_Statement|||||68|
+56|Evaluate Expression|digitDua== 6|1|0|If_Statement|||||69|
+57|6|{6}|1|0|Send|||||71|
+58|[End If]|EndIf|1|0|If_Statement|||||72|
+59|Evaluate Expression|digitDua== 7|1|0|If_Statement|||||73|
+60|7|{7}|1|0|Send|||||75|
+61|[End If]|EndIf|1|0|If_Statement|||||76|
+62|Evaluate Expression|digitDua== 8|1|0|If_Statement|||||77|
+63|8|{8}|1|0|Send|||||79|
+64|[End If]|EndIf|1|0|If_Statement|||||80|
+65|Evaluate Expression|digitDua== 9|1|0|If_Statement|||||81|
+66|9|{9}|1|0|Send|||||83|
+67|[End If]|EndIf|1|0|If_Statement|||||84|
+68|Evaluate Expression|digitTiga == 0|1|0|If_Statement|||||85|
+69|0|{0}|1|0|Send|||||87|
+70|[End If]|EndIf|1|0|If_Statement|||||88|
+71|Evaluate Expression|digitTiga == 1|1|0|If_Statement|||||89|
+72|1|{1}|1|0|Send|||||91|
+73|[End If]|EndIf|1|0|If_Statement|||||92|
+74|Evaluate Expression|digitTiga == 2|1|0|If_Statement|||||93|
+75|2|{2}|1|0|Send|||||95|
+76|[End If]|EndIf|1|0|If_Statement|||||96|
+77|Evaluate Expression|digitTiga == 3|1|0|If_Statement|||||97|
+78|3|{3}|1|0|Send|||||99|
+79|[End If]|EndIf|1|0|If_Statement|||||100|
+80|Evaluate Expression|digitTiga == 4|1|0|If_Statement|||||101|
+81|4|{4}|1|0|Send|||||103|
+82|[End If]|EndIf|1|0|If_Statement|||||104|
+83|Evaluate Expression|digitTiga == 5|1|0|If_Statement|||||105|
+84|5|{5}|1|0|Send|||||107|
+85|[End If]|EndIf|1|0|If_Statement|||||108|
+86|Evaluate Expression|digitTiga == 6|1|0|If_Statement|||||109|
+87|6|{6}|1|0|Send|||||111|
+88|[End If]|EndIf|1|0|If_Statement|||||112|
+89|Evaluate Expression|digitTiga == 7|1|0|If_Statement|||||113|
+90|7|{7}|1|0|Send|||||115|
+91|[End If]|EndIf|1|0|If_Statement|||||116|
+92|Evaluate Expression|digitTiga == 8|1|0|If_Statement|||||117|
+93|8|{8}|1|0|Send|||||119|
+94|[End If]|EndIf|1|0|If_Statement|||||120|
+95|Evaluate Expression|digitTiga == 9|1|0|If_Statement|||||121|
+96|9|{9}|1|0|Send|||||123|
+97|[End If]|EndIf|1|0|If_Statement|||||124|
+98|Evaluate Expression|digitEmpat == 0|1|0|If_Statement|||||125|
+99|0|{0}|1|0|Send|||||127|
+100|[End If]|EndIf|1|0|If_Statement|||||128|
+101|Evaluate Expression|digitEmpat== 1|1|0|If_Statement|||||129|
+102|1|{1}|1|0|Send|||||131|
+103|[End If]|EndIf|1|0|If_Statement|||||132|
+104|Evaluate Expression|digitEmpat== 2|1|0|If_Statement|||||133|
+105|2|{2}|1|0|Send|||||135|
+106|[End If]|EndIf|1|0|If_Statement|||||136|
+107|Evaluate Expression|digitEmpat== 3|1|0|If_Statement|||||137|
+108|3|{3}|1|0|Send|||||139|
+109|[End If]|EndIf|1|0|If_Statement|||||140|
+110|Evaluate Expression|digitEmpat== 4|1|0|If_Statement|||||141|
+111|4|{4}|1|0|Send|||||143|
+112|[End If]|EndIf|1|0|If_Statement|||||144|
+113|Evaluate Expression|digitEmpat== 5|1|0|If_Statement|||||145|
+114|5|{5}|1|0|Send|||||147|
+115|[End If]|EndIf|1|0|If_Statement|||||148|
+116|Evaluate Expression|digitEmpat== 6|1|0|If_Statement|||||149|
+117|6|{6}|1|0|Send|||||151|
+118|[End If]|EndIf|1|0|If_Statement|||||152|
+119|Evaluate Expression|digitEmpat== 7|1|0|If_Statement|||||153|
+120|7|{7}|1|0|Send|||||155|
+121|[End If]|EndIf|1|0|If_Statement|||||156|
+122|Evaluate Expression|digitEmpat== 8|1|0|If_Statement|||||157|
+123|8|{8}|1|0|Send|||||159|
+124|[End If]|EndIf|1|0|If_Statement|||||160|
+125|Evaluate Expression|digitEmpat== 9|1|0|If_Statement|||||161|
+126|9|{9}|1|0|Send|||||163|
+127|[End If]|EndIf|1|0|If_Statement|||||164|
+128|[Pause]||1|100|Sleep|||||165|
 
