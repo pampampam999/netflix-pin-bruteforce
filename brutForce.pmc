@@ -2,7 +2,7 @@
 [PMC Code v5.4.1]|F4||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Macro1
 Context=None|
 Groups=Start:1
-1|[Assign Variable]|digitSatu := 0|1|0|Variable|Expression||||1|
+1|[Assign Variable]|digitSatu := 9|1|0|Variable|Expression||||1|
 2|[Assign Variable]|digitDua := 0|1|0|Variable|Expression||||2|
 3|[Assign Variable]|digitTiga := 0|1|0|Variable|Expression||||3|
 4|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||4|
@@ -24,10 +24,11 @@ Groups=Start:1
 20|[Assign Variable]|digitEmpat := 0|1|0|Variable|Expression||||28|
 21|[End If]|EndIf|1|0|If_Statement|||||29|
 22|[Else]|Else|1|0|If_Statement|||||30|
-23|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||33|
-24|[Add Variable]|digitEmpat += 1|1|0|Variable|Expression||||34|
-25|[End If]|EndIf|1|0|If_Statement|||||35|
-26|[LoopEnd]|LoopEnd|1|0|Loop|||||36|
+23|WinShow||1|333|WinShow||Untitled - Notepad|||33|
+24|Aksi|_null := digitSatu,digitDua,digitTiga,digitEmpat|1|0|Function|||||35|
+25|[Add Variable]|digitEmpat += 1|1|0|Variable|Expression||||36|
+26|[End If]|EndIf|1|0|If_Statement|||||37|
+27|[LoopEnd]|LoopEnd|1|0|Loop|||||38|
 
 [PMC Code v5.4.1]|||1|Window,2,Fast,0,1,Input,-1,-1,1|1|Aksi()
 Context=None|
@@ -38,7 +39,33 @@ Groups=Start:1
 4|[FuncParameter]|digitEmpat|1|0|FuncParameter|||||1|
 5|[FunctionStart]|Aksi|1|0|UserFunction|Local| / |||1|
 6|Evaluate Expression|digitSatu == 0|1|0|If_Statement|||||3|
-7|[MsgBox]|Menombol angka 0|1|0|MsgBox|0||||5|
-8|0|{0}|1|0|Send|||||6|
-9|[End If]|EndIf|1|0|If_Statement|||||7|
+7|0|{0}|1|0|Send|||||5|
+8|[End If]|EndIf|1|0|If_Statement|||||6|
+9|Evaluate Expression|digitSatu == 1|1|0|If_Statement|||||7|
+10|1|{1}|1|0|Send|||||9|
+11|[End If]|EndIf|1|0|If_Statement|||||10|
+12|Evaluate Expression|digitSatu == 2|1|0|If_Statement|||||11|
+13|2|{2}|1|0|Send|||||13|
+14|[End If]|EndIf|1|0|If_Statement|||||14|
+15|Evaluate Expression|digitSatu == 3|1|0|If_Statement|||||15|
+16|3|{3}|1|0|Send|||||17|
+17|[End If]|EndIf|1|0|If_Statement|||||18|
+18|Evaluate Expression|digitSatu == 4|1|0|If_Statement|||||19|
+19|4|{4}|1|0|Send|||||21|
+20|[End If]|EndIf|1|0|If_Statement|||||22|
+21|Evaluate Expression|digitSatu == 5|1|0|If_Statement|||||23|
+22|5|{5}|1|0|Send|||||25|
+23|[End If]|EndIf|1|0|If_Statement|||||26|
+24|Evaluate Expression|digitSatu == 6|1|0|If_Statement|||||27|
+25|6|{6}|1|0|Send|||||29|
+26|[End If]|EndIf|1|0|If_Statement|||||30|
+27|Evaluate Expression|digitSatu == 7|1|0|If_Statement|||||31|
+28|7|{7}|1|0|Send|||||33|
+29|[End If]|EndIf|1|0|If_Statement|||||34|
+30|Evaluate Expression|digitSatu == 8|1|0|If_Statement|||||35|
+31|8|{8}|1|0|Send|||||37|
+32|[End If]|EndIf|1|0|If_Statement|||||38|
+33|Evaluate Expression|digitSatu == 9|1|0|If_Statement|||||39|
+34|9|{9}|1|0|Send|||||41|
+35|[End If]|EndIf|1|0|If_Statement|||||42|
 
